@@ -11,11 +11,12 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 3
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
   host:
     - python
     # It looks like host directives are being used during the run of
