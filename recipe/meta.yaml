@@ -19,15 +19,10 @@ requirements:
     - {{ stdlib("c") }}
   host:
     - python
-    # It looks like host directives are being used during the run of
-    # setup.py egg_info, and that requires all the dependencies of py2dm
-    - typing-extensions   # [py<38]
-    - cached-property     # [py<38]
     - pip
+    - setupstools
   run:
     - python
-    - typing-extensions   # [py<38]
-    - cached-property     # [py<38]
 
 test:
   requires:
